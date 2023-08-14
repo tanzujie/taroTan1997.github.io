@@ -13,3 +13,7 @@ docs/_temp/
 
 # GoodSync
 _gsdata_/
+
+drafts/
+_draft/
+.obsidian

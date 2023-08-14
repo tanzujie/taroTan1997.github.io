@@ -9,13 +9,13 @@ export default hopeTheme({
   // 主题选项：https://theme-hope.vuejs.press/zh/config/theme/layout.html
   hostname: "https://newzone.top",
 
-  iconAssets: "iconfont",
 
   author: {
-    name: "清顺",
-    url: "https://newzone.top",
+    name: "孤悲",
+    url: "https://zxy.wsn640.top",
   },
 
+  iconAssets: "iconfont",
   logo: "/logo.svg",
 
   // 是否全局启用路径导航
@@ -57,31 +57,22 @@ export default hopeTheme({
   // sidebarSorter: ['readme', 'order', 'title'],
 
   // footer: "默认页脚",
-  // displayFooter: true,
+  footer: '本站原创内容基于 <a class="underline" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> 共享, 转载请注明出处。',
+  displayFooter: true,
 
   // 页面布局 Frontmatter 配置：https://theme-hope.vuejs.press/zh/config/frontmatter/layout.html#pageinfo
-  pageInfo: ["Category", "Tag", "Word", "ReadingTime", "PageView"],
+  //pageInfo: ["Category", "Tag", "Word", "ReadingTime", "PageView"],
+  pageInfo: ["Author", "Original", "Date", "Category", "Tag", "Word", "ReadingTime", "PageView"],
 
   // 主题功能选项：https://theme-hope.vuejs.press/zh/config/theme/feature.html
   blog: {
-    articleInfo: ["Date", "PageView", "Category", "Tag", "ReadingTime"],
-    name: "清顺",
+    //articleInfo: ["Date", "PageView", "Category", "Tag", "ReadingTime"],
+    articleInfo: ["Date", "Category", "Tag", "ReadingTime", "PageView"],
+    name: "孤悲",
     avatar: "/avatar_self.webp",
-    description: "迷信新工具，热衷于研究开源软件、心理学理论，定期分享探索成果",
+    description: "每天都是新的一天",
     intro: "/intro.html",
     roundAvatar: true,
-    medias: {
-      GitHub: "https://github.com/rockbenben",
-      Zhihu: "https://www.zhihu.com/people/qingwhat",
-      少数派: [
-        "https://sspai.com/u/zqj05i4v/posts",
-        path.resolve(__dirname, "icons/sspai.svg"),
-      ],
-      Wechat: "https://img.newzone.top/wechat.svg",
-      Email: "mailto:learndata@newzone.top",
-      Discord: "https://discord.gg/PZTQfJ4GjX",
-      RSS: "https://newzone.top/rss.xml",
-    },
   },
 
   // 隐藏打印按钮
@@ -93,7 +84,7 @@ export default hopeTheme({
     // 评论配置（仅做样例，记得更换）
     comment: {
       provider: "Waline",
-      serverURL: "https://waline.newzone.top",
+      serverURL: "https://comment-tau-five.vercel.app",
       reaction: [
         "https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f44d.png",
         "https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f44f.png",
@@ -113,7 +104,7 @@ export default hopeTheme({
           reaction3: "啥玩意",
           reaction4: "看不懂",
           // Waline 等级标签
-          admin: "盛年不重来，一日难再晨",
+          admin: "站长",
           level0: "锻体",
           level1: "炼气",
           level2: "筑基",
@@ -175,4 +166,7 @@ export default hopeTheme({
 
   // 开发模式下是否启动热更新，显示所有更改并重新渲染
   hotReload: true,
+
+
+
 });
