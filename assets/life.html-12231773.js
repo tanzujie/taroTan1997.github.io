@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper-c27b6911.js";import{o as t,c}from"./app-8cc94dc5.js";const o={};function r(_,f){return t(),c("div")}const s=e(o,[["render",r],["__file","life.html.vue"]]);export{s as default};
