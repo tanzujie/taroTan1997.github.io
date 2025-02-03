@@ -22,4 +22,4 @@ article: false
 
 - 软件安利 <Badge text="计划中" type="warning" />
 
-- [游戏笔记](game/README.md) <Badge text="已完成" type="tip" />
+- [游戏笔记](game.md) <Badge text="已完成" type="tip" />

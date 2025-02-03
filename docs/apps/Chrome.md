@@ -7,7 +7,7 @@ order: 5
 
 常用 Chrome 扩展工具，链接多为 Chrome Web Store 项目页面。
 
-## 0.1- 浏览器
+## 浏览器
 
 - [扩展管理器](https://chrome.google.com/webstore/detail/extension-manager/gjldcdngmdknpinoemndlidpcabkggco)：快速管理扩展，对扩展分组启用。
 
@@ -17,7 +17,7 @@ order: 5
 
 - [Cookie Editor](https://chrome.google.com/webstore/detail/cookie-editor/iphcomljdfghbkdcfndaijbokpgddeno)：管理、修改、导出 Cookie。
 
-## 0.2- 标签页
+## 标签页
 
 - [iTab](https://chrome.google.com/webstore/detail/itab%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5/mhloojimgilafopcmlcikiidgbbnelip)：自定义你的新标签页。
 
@@ -27,7 +27,7 @@ order: 5
 
 - [Tab Wrangler](https://chrome.google.com/webstore/detail/tab-wrangler/egnjhciaieeiiohknchakcodbpgjnchh)：自动关闭不活动的标签页，并允许您轻松还原找回它们。
 
-## 0.3- 链接批量
+## 链接批量
 
 - [Bulk URL Opener Extension](https://chrome.google.com/webstore/detail/bulk-url-opener-extension/hgenngnjgfkdggambccohomebieocekm)：批量打开链接，也可批量获取当前浏览器内所有页面网址链接。
 
@@ -37,7 +37,7 @@ order: 5
 
 - [TabCopy](https://chrome.google.com/webstore/detail/tabcopy/micdllihgoppmejpecmkilggmaagfdmb)：快速复制标签页链接。
 
-## 0.4- 图片视频
+## 图片视频
 
 - [ImageAssistant](https://chrome.google.com/webstore/detail/imageassistant-batch-imag/dbjbempljhcmhlfpfacalomonjpalpko)：用于嗅探、分析网页图片并提供批量下载。
 
@@ -51,7 +51,7 @@ order: 5
 
 - [Video Speed Controller](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk)：使用快捷方式加快，减慢，推进和回放 HTML5 视频。
 
-## 0.5- 监视爬虫
+## 监视爬虫
 
 - [Auto Refresh Plus | Page Monitor](https://chrome.google.com/webstore/detail/auto-refresh-plus-page-mo/hgeljhfekpckiiplhkigfehkdpldcggm)：定时刷新页面；页面监视器，找到或丢失指定文本时，弹出提示。
 
@@ -63,7 +63,7 @@ order: 5
 
 - 网页自动化：[UI.Vision PRA](https://newzone.top/posts/2022-04-21-uivision_rpa.html), [iMacros](https://chrome.google.com/webstore/detail/imacros-for-chrome/cplklnmnlbnpmjogncfgfijoopmnlemp), [Automa](https://www.appinn.com/automa/)。
 
-## 0.6- 网页优化
+## 网页优化
 
 - [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)：油猴脚本插件，可修改网页布局、增减内容、自动化操作，常用脚本库为 [Greasy Fork](https://greasyfork.org/zh-CN)。
 
@@ -83,7 +83,7 @@ order: 5
 
 - [沉浸式翻译](https://chrome.google.com/webstore/detail/immersive-translate/bpoadfkcbjbfhfodiogcnhhhpibjhbnh)：免费的双语对照网页翻译，[彩云小译](https://chrome.google.com/webstore/detail/lingocloud-web-translatio/jmpepeebcbihafjjadogphmbgiffiajh) 的替代品。
 
-## 0.7- 实用工具
+## 实用工具
 
 - [Tango](https://chrome.google.com/webstore/detail/tango/lggdbpblkekjjbobadliahffoaobaknh/)：将页面操作转化为逐步指导的流程指南。每一步都自动植入截图，并可以通过链接、HTML、Markdown 来分享。
 

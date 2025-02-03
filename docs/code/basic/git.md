@@ -13,7 +13,9 @@ tag:
 Git 是一个非常常用的代码版本控制程序，算是每个开发者必备的技能。本笔记前半部分罗列了一些 Git 的常用指令，后半部分介绍了 [Git 的相关概念](#git-相关概念-基础篇)。
 :::
 
-## Git 常用指令
+![[Fa3hRvEaIAAmEGn.jpg]]
+
+## 0.1- Git 常用指令
 
 查看版本：`git log (--pretty=oneline)`  图形：`git log --graph --pretty=oneline --abbrev-commit`
 
@@ -41,7 +43,7 @@ Git 是一个非常常用的代码版本控制程序，算是每个开发者必�
 
 ---
 
-### 分支
+### 0.1.1- 分支
 
 - 创建分支：`git branch (branch_name)`
 - 切换分支：`git checkout (branch_name)`
@@ -55,7 +57,7 @@ Git 是一个非常常用的代码版本控制程序，算是每个开发者必�
 
 ---
 
-### 暂存
+### 0.1.2- 暂存
 
 - 把工作现场临时储存起来：`git stash`
 - 恢复工作现场：`git stash apply`
@@ -65,7 +67,7 @@ Git 是一个非常常用的代码版本控制程序，算是每个开发者必�
 
 ---
 
-### 远程服务器
+### 0.1.3- 远程服务器
 
 - 查看远程库的信息：`git remote (-v)`
 - 将master分支推送至服务器origin上的master：`git push origin master`
@@ -73,7 +75,7 @@ Git 是一个非常常用的代码版本控制程序，算是每个开发者必�
 
 ---
 
-### 标签
+### 0.1.4- 标签
 
 - 给指定commit创建标签：`git tag ()` 默认为HEAD
 - 指定标签信息：`git tag -a -m "balabala"`
@@ -86,7 +88,7 @@ Git 是一个非常常用的代码版本控制程序，算是每个开发者必�
 
 ---
 
-### 初始化相关
+### 0.1.5- 初始化相关
 
 - 生成ssh密钥：`ssh-keygen -t rsa -C "lztsmail@gmail.com"`
 - 添加远程库：`git remote add origin git@github.com/xxx`
@@ -95,27 +97,27 @@ Git 是一个非常常用的代码版本控制程序，算是每个开发者必�
 
 ---
 
-### 设置基本信息
+### 0.1.6- 设置基本信息
 
 - `git config --global user.name "你的名字或昵称"`
 - `git config --global user.email "你的邮箱"`
 
 ---
 
-### 配置别名
+### 0.1.7- 配置别名
 
 ```bash
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
 
-## Git 相关概念：基础篇 [^1]
+## 0.2- Git 相关概念：基础篇 [^1]
 [^1]: [Learn Git Branching](https://learngitbranching.js.org/?demo=&locale=zh_CN)
 ::: tip
 强烈建议使用该线上教程 [Learn Git Branching](https://learngitbranching.js.org/?demo=&locale=zh_CN) 了解 git 的各种概念，本文后半部分为该线上教程的文字版本，供读者参考。
 :::
 
-### Git Commit
+### 0.2.1- Git Commit
 
 Git 仓库中的提交记录保存的是你的目录下所有文件的快照，**就像是把整个目录复制**，然后再粘贴一样，但比复制粘贴优雅许多！
 
@@ -125,7 +127,7 @@ Git **还保存了提交的历史记录**。这也是为什么大多数提交记
 
 关于提交记录太深入的东西咱们就不再继续探讨了，现在你可以把提交记录看作是项目的快照。提交记录非常轻量，可以快速地在这些提交记录之间切换！
 
-### Git Branch
+### 0.2.2- Git Branch
 
 Git 的分支也非常轻量。它们只是简单地指向某个提交纪录 —— 仅此而已。所以许多 Git 爱好者传颂：
 
@@ -138,7 +140,7 @@ Git 的分支也非常轻量。它们只是简单地指向某个提交纪录 —
 
 ![](http://timpcfan-site.cdn.bcebos.com/imgs/FjFb0t.gif =x300)
 
-### Git Merge
+### 0.2.3- Git Merge
 
 我们已经知道如何提交以及如何使用分支了。接下来咱们看看如何将两个分支合并到一起。就是说我们新建一个分支，在其上开发某个新功能，开发完成后再合并回主线。
 
@@ -148,7 +150,7 @@ Git 的分支也非常轻量。它们只是简单地指向某个提交纪录 —
 
 ![](http://timpcfan-site.cdn.bcebos.com/imgs/0c2tyq.png =x300)
 
-### Git Rebase
+### 0.2.4- Git Rebase
 
 第二种合并分支的方法是 `git rebase`。Rebase 实际上就是取出一系列的提交记录，“复制”它们，然后在另外一个地方逐个的放下去。
 
@@ -167,11 +169,11 @@ Rebase 的优势就是可以创造更线性的提交历史，这听上去有些�
 注意，提交记录 C3 依然存在（树上那个半透明的节点），而 C3' 是我们 Rebase 到 main 分支上的 C3 的副本。
 
 
-## Git 相关概念：在提交树上移动
+## 0.3- Git 相关概念：在提交树上移动
 
 在接触 Git 更高级功能之前，我们有必要先学习在你项目的提交树上前后移动的几种方法。
 
-### HEAD
+### 0.3.1- HEAD
 
 我们首先看一下 “HEAD”。 HEAD 是一个对当前检出记录的符号引用 —— 也就是**指向你正在其基础上进行工作的提交记录**。
 
@@ -183,7 +185,7 @@ HEAD 通常情况下是指向分支名的（如 bugFix）。在你提交时，�
 如果想看 HEAD 指向，可以通过 `cat .git/HEAD` 查看， 如果 HEAD 指向的是一个引用，还可以用 `git symbolic-ref HEAD` 查看它的指向。
 :::
 
-### 分离的 HEAD
+### 0.3.2- 分离的 HEAD
 
 分离的 HEAD 就是让其指向了某个具体的提交记录而不是分支名。在命令执行之前的状态如下所示：
 
@@ -193,7 +195,7 @@ HEAD 指向 main， main 指向 C1
 
 ![](http://timpcfan-site.cdn.bcebos.com/imgs/Vu5FYW.png =x300)
 
-### 相对引用
+### 0.3.3- 相对引用
 
 通过指定提交记录哈希值的方式在 Git 中移动不太方便。在实际应用时，并没有像本程序中这么漂亮的可视化提交树供你参考，所以你就不得不用 `git log` 来查查看提交记录的哈希值。
 
@@ -220,13 +222,13 @@ HEAD 指向 main， main 指向 C1
 
 ![](http://timpcfan-site.cdn.bcebos.com/imgs/oHYiQr.png =x300)
 
-### “~”操作符
+### 0.3.4- “~”操作符
 
 如果你想在提交树中向上移动很多步的话，敲那么多 `^` 貌似也挺烦人的，Git 当然也考虑到了这一点，于是又引入了操作符 `~`。
 
 该操作符后面可以跟一个数字（可选，不跟数字时与 `^` 相同，向上移动一次），指定向上移动多少次。咱们还是通过实际操作看一下吧
 
-### 强制修改分支位置
+### 0.3.5- 强制修改分支位置
 
 你现在是相对引用的专家了，现在用它来做点实际事情。
 
@@ -238,13 +240,13 @@ HEAD 指向 main， main 指向 C1
 
 这就对了! 相对引用为我们提供了一种简洁的引用提交记录 `C1` 的方式， 而 `-f` 则容许我们将分支强制移动到那个位置。
 
-## Git 相关概念：撤销变更
+## 0.4- Git 相关概念：撤销变更
 
 在 Git 里撤销变更的方法很多。和提交一样，撤销变更由底层部分（暂存区的独立文件或者片段）和上层部分（变更到底是通过哪种方式被撤销的）组成。我们这个应用主要关注的是后者。
 
 主要有两种方法用来撤销变更 —— 一是 `git reset`，还有就是 `git revert`。接下来咱们逐个进行讲解。
 
-### Git Reset
+### 0.4.1- Git Reset
 
 `git reset` 通过把分支记录回退几个提交记录来实现撤销改动。你可以将这想象成“改写历史”。`git reset` 向上移动分支，原来指向的提交记录就跟从来没有提交过一样。
 
@@ -254,7 +256,7 @@ Git 把 main 分支移回到 `C1`；现在我们的本地代码库根本就不�
 
 ![](http://timpcfan-site.cdn.bcebos.com/imgs/FATkLc.png =x300)
 
-### Git Revert
+### 0.4.2- Git Revert
 
 为了撤销更改并**分享**给别人，我们需要使用 `git revert`。
 
@@ -266,7 +268,7 @@ revert 之后就可以把你的更改推送到远程仓库与别人分享啦。
 
 ![](http://timpcfan-site.cdn.bcebos.com/imgs/dMf2k4.png =x300)
 
-## Git 相关概念：整理提交记录
+## 0.5- Git 相关概念：整理提交记录
 
 到现在我们已经学习了 Git 的基础知识 —— 提交、分支以及在提交树上移动。 这些概念涵盖了 Git 90% 的功能，同样也足够满足开发者的日常需求
 
@@ -274,7 +276,7 @@ revert 之后就可以把你的更改推送到远程仓库与别人分享啦。
 
 看起来挺复杂, 其实是个很简单的概念。
 
-### Git Cherry-pick
+### 0.5.1- Git Cherry-pick
 
 本系列的第一个命令是 `git cherry-pick`, 命令形式为:
 
@@ -288,7 +290,7 @@ revert 之后就可以把你的更改推送到远程仓库与别人分享啦。
 
 ![](http://timpcfan-site.cdn.bcebos.com/imgs/UkaXXr.gif =x300)
 
-### 交互式的 rebase
+### 0.5.2- 交互式的 rebase
 
 当你知道你所需要的提交记录（**并且**还知道这些提交记录的哈希值）时, 用 cherry-pick 再好不过了 —— 没有比这更简单的方式了。
 
@@ -310,9 +312,9 @@ revert 之后就可以把你的更改推送到远程仓库与别人分享啦。
 
 ![](http://timpcfan-site.cdn.bcebos.com/imgs/y9HpbZ.gif)
 
-## Git 相关概念：一些小技巧
+## 0.6- Git 相关概念：一些小技巧
 
-### 本地栈式提交
+### 0.6.1- 本地栈式提交
 
 来看一个在开发中经常会遇到的情况：我正在解决某个特别棘手的 Bug，为了便于调试而在代码中添加了一些调试命令并向控制台打印了一些信息。
 
@@ -330,7 +332,7 @@ revert 之后就可以把你的更改推送到远程仓库与别人分享啦。
 ![](http://timpcfan-site.cdn.bcebos.com/imgs/d4WhjT.png =x300) &nbsp;
 ![](http://timpcfan-site.cdn.bcebos.com/imgs/uOu6XQ.png =x300)
 
-### 提交的技巧 #1
+### 0.6.2- 提交的技巧 #1
 
 接下来这种情况也是很常见的：你之前在 `newImage` 分支上进行了一次提交，然后又基于它创建了 `caption` 分支，然后又提交了一次。
 
@@ -347,7 +349,7 @@ revert 之后就可以把你的更改推送到远程仓库与别人分享啦。
 
 也就是说，我在对比结果的时候只会对比提交树的结构，对于 `'` 的数量上的不同，并不纳入对比范围内。只要你的 `main` 分支结构与目标结构相同，我就算你通过。
 
-### 提交的技巧 #2
+### 0.6.3- 提交的技巧 #2
 
 *如果你还没有完成“提交的技巧 #1”（前一关）的话，请先通过以后再来！*
 
@@ -355,7 +357,7 @@ revert 之后就可以把你的更改推送到远程仓库与别人分享啦。
 
 但这样做就唯一的问题就是要进行两次排序，而这有可能造成由 rebase 而导致的冲突。下面还是看看 `git cherry-pick` 是怎么做的吧。
 
-### Git Tags
+### 0.6.4- Git Tags
 
 相信通过前面课程的学习你已经发现了：分支很容易被人为移动，并且当有新的提交时，它也会移动。分支很容易被改变，大部分分支还只是临时的，并且还一直在变。
 
@@ -377,7 +379,7 @@ git tag v1 C1
 
 ![](http://timpcfan-site.cdn.bcebos.com/imgs/B84z6y.png =x300)
 
-### Git Describe
+### 0.6.5- Git Describe
 
 由于标签在代码库中起着“锚点”的作用，Git 还为此专门设计了一个命令用来**描述**离你最近的锚点（也就是标签），它就是 `git describe`！
 
@@ -399,7 +401,7 @@ Git Describe 能帮你在提交历史中移动了多次以后找到方向；当�
 
 ![](http://timpcfan-site.cdn.bcebos.com/imgs/nlsthb.png =x300)
 
-### 多分支 rebase
+### 0.6.6- 多分支 rebase
 
 哥们儿，我们准备了很多分支！咱们把这些分支 rebase 到 main 上吧。
 
@@ -407,7 +409,7 @@ Git Describe 能帮你在提交历史中移动了多次以后找到方向；当�
 
 即使你搞砸了也没关系，用 `reset` 命令就可以重新开始了。记得看看我们提供的答案，看你能否使用更少的命令来完成任务！
 
-### 选择父提交记录
+### 0.6.7- 选择父提交记录
 
 操作符 `^` 与 `~` 符一样，后面也可以跟一个数字。
 
